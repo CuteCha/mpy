@@ -18,5 +18,12 @@ def do_connect():
     print("mac: ", wlan.config("mac"))
 
 
+def do_access():
+    ap = network.WLAN(network.AP_IF)
+    ap.config(ssid='ESP-AP')
+    ap.config(max_clients=10)
+    ap.active(True)
+
+
 if __name__ == '__main__':
     do_connect()
