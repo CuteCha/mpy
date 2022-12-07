@@ -19,6 +19,5 @@ def main():
     thread_2 = _thread.start_new_thread(func02, (2,))
 
 
-
 if __name__ == '__main__':
     main()
